@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-import { PORT, mongoDBURL } from "./config.js";
+import { mongoDBURL } from "./config.js";
 import booksroutes from "./routes/booksRoutes.js";
 import cors from "cors";
 
@@ -9,7 +9,7 @@ const app = express();
 //middleware for parsing request body
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://backend-testing-nu.vercel.app/",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })
@@ -28,9 +28,7 @@ mongoose
   .connect(mongoDBURL)
   .then(() => {
     console.log("app is connected to db");
-    app.listen(PORT, () => {
-      console.log(`App is listening to port: ${PORT}`);
-    });
+    app.listen("https://backend-testing-nu.vercel.app/");
   })
   .catch((error) => {
     console.log(error);
