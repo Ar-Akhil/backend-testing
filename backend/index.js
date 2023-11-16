@@ -18,7 +18,7 @@ app.use(
 app.use(express.json());
 
 app.get("/", (request, response) => {
-  request.json("connected");
+  console.log(request);
   return response.status(909).send("Testing");
 });
 
