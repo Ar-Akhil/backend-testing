@@ -9,7 +9,7 @@ const app = express();
 //middleware for parsing request body
 app.use(
   cors({
-    origin: "https://backend-testing-nu.vercel.app/",
+    origin: "https://backend-testing-nu.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type"],
   })
