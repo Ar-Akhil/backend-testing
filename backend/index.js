@@ -11,14 +11,14 @@ app.use(
   cors({
     origin: "https://backend-testing-nu.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type"],
+    credentials: true,
   })
 );
 
 app.use(express.json());
 
 app.get("/", (request, response) => {
-  console.log(request);
+  request.json("connected");
   return response.status(909).send("Testing");
 });
 
