@@ -1,7 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
 import booksroutes from "./routes/booksRoutes.js";
-import dotenv from "dotenv";
 import cors from "cors";
 
 const app = express();
