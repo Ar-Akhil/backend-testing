@@ -1,6 +1,8 @@
 # Bakend-Testing
 
 A testing server created using express and mangodb as database.
+\*id's are auto generated,look into the list of books for id.
+\*\*Testing was done in postman.
 
 ## API Reference
 
@@ -41,6 +43,3 @@ A testing server created using express and mangodb as database.
 ```http
   DELETE https://backend-testing-nu.vercel.app/books/{:id}*
 ```
-
-\*id's are auto generated,look into the list of books for id.
-\*\*Testing was done in postman.
