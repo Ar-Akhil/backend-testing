@@ -2,10 +2,9 @@ import express from "express";
 import mongoose from "mongoose";
 import booksroutes from "./routes/booksRoutes.js";
 import cors from "cors";
-import { mongoDBURL } from "./config.js";
+import mongoDBURL from "./config.js";
 
 const app = express();
-dontenv.config({ path: "./.env" });
 
 //middleware for parsing request body
 app.use(
