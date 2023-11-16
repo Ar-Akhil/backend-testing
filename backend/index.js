@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
-import { mongoDBURL } from "./config.js";
 import booksroutes from "./routes/booksRoutes.js";
+import dotenv from "dotenv";
 import cors from "cors";
 
 const app = express();
@@ -25,7 +25,7 @@ app.get("/", (request, response) => {
 app.use("/books", booksroutes);
 
 mongoose
-  .connect(mongoDBURL)
+  .connect(process.env.mongoDBURL)
   .then(() => {
     console.log("app is connected to db");
     app.listen("https://backend-testing-nu.vercel.app/");
